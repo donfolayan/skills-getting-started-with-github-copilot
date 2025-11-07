@@ -80,11 +80,39 @@ section h3 {
 
 /* Make the list compact and scroll if too long */
 .participants-list {
-  list-style-type: disc;
-  padding-left: 20px;
+  /* Hide default bullet points and make the list compact */
+  list-style-type: none;
+  padding-left: 0;
   max-height: 120px;
   overflow-y: auto;
   margin: 0;
+}
+
+/* Each participant row: email on the left, remove button on the right */
+.participant-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.participant-item .participant-email {
+  word-break: break-all;
+  margin-right: 8px;
+}
+
+/* Small, subtle remove button */
+.remove-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.remove-participant:hover {
+  background: rgba(198, 40, 40, 0.08);
 }
 
 /* Small, readable list items with subtle alternating background */
