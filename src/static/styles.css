@@ -65,13 +65,81 @@ section h3 {
   background-color: #f9f9f9;
 }
 
-.activity-card h4 {
-  margin-bottom: 10px;
-  color: #0066cc;
+/* Participants area inside activity card */
+.participants {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #e0e0e0;
 }
 
-.activity-card p {
-  margin-bottom: 8px;
+.participants h5 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #1a237e;
+}
+
+/* Make the list compact and scroll if too long */
+.participants-list {
+  /* Hide default bullet points and make the list compact */
+  list-style-type: none;
+  padding-left: 0;
+  max-height: 120px;
+  overflow-y: auto;
+  margin: 0;
+}
+
+/* Each participant row: email on the left, remove button on the right */
+.participant-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.participant-item .participant-email {
+  word-break: break-all;
+  margin-right: 8px;
+}
+
+/* Small, subtle remove button */
+.remove-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.remove-participant:hover {
+  background: rgba(198, 40, 40, 0.08);
+}
+
+/* Small, readable list items with subtle alternating background */
+.participants-list li {
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.participants-list li:nth-child(odd) {
+  background: rgba(26, 35, 126, 0.03);
+}
+
+/* No participants placeholder */
+.no-participants {
+  font-size: 14px;
+  color: #666;
+  padding: 6px 0;
+}
+
+/* improve scroll aesthetics on supported browsers */
+.participants-list::-webkit-scrollbar {
+  width: 8px;
+}
+.participants-list::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
 }
 
 .form-group {
